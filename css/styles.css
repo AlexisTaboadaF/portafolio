@@ -137,6 +137,80 @@ body {
 
 
 
+
+/* PORTAFOLIO custom styles */
+#portfolio {
+    background: #f6f7fa;
+  }
+  
+  .portfolio-item {
+    transition: box-shadow .2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    min-height: 270px;
+  }
+  
+  .portfolio-item img {
+    transition: transform .2s;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .portfolio-overlay {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(30, 144, 255, 0.7); /* azul claro translúcido */
+    opacity: 0;
+    transition: opacity .2s;
+    z-index: 2;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* El overlay no bloquea el click para el modal */
+  }
+  
+  .portfolio-item:hover img {
+    transform: scale(1.06);
+    filter: blur(1px);
+  }
+  
+  .portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .portfolio-overlay h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    color: #fff;
+  }
+  
+  .portfolio-overlay span {
+    color: #f1f6ff;
+  }
+  
+  @media (max-width: 767px) {
+    .portfolio-item {
+      min-height: 180px;
+    }
+    .portfolio-overlay {
+      font-size: 0.95rem;
+      padding: .75rem;
+    }
+  }
+
+
+
+
+
+
 /* Tarjetas */
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
