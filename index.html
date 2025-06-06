@@ -42,7 +42,6 @@
     <!-- Sección de Habilidades -->
     <section class="py-5" id="skills">
         <div class="container">
-            <!-- Nueva cabecera tipo "hero-text" arriba de las habilidades -->
             <div class="skills-header text-center mb-5">
                 <h1 class="skills-title">Alexis Taboada Flores</h1>
                 <h2 class="skills-subtitle">Analista de Datos | Sistemas</h2>
@@ -52,31 +51,48 @@
             </div>
             <h2 class="text-center mb-5">Mis Habilidades</h2>
             <div class="row g-4">
+                <!-- Visualización -->
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
                             <i class="fas fa-chart-bar fa-3x mb-3 text-primary"></i>
                             <h3 class="card-title">Visualización</h3>
-                            <p class="card-text"><strong>Conocimientos avanzados</strong> en <strong>Excel</strong>, <strong>Power BI</strong>, incluyendo el manejo de <strong>tablas dinámicas</strong> y la creación de <strong>dashboards interactivos</strong>. Estos conocimientos los apliqué en la elaboración de un dashboard referente a los <strong>activos (cajas - POS)</strong> de la empresa, permitiendo no solo la <strong>consolidación de datos</strong> en un solo repositorio, sino también el <strong>análisis visual</strong> de insights y variables como el leasing, fecha de devolución, ubicacion actual, tienda asignada y modelo de los equipos. Esto facilitó la generación de un plan de acción para el desecho, migración o devolución a proveedor, lo que representó un <strong>ahorro tangible</strong> para la organización.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-code fa-3x mb-3 text-primary"></i>
-                            <h3 class="card-title">Programacion</h3>
-                            <p class="card-text">En mi experiencia como analista de cajas, he tenido la oportunidad de aplicar mis conocimientos en <strong>Python</strong>, <strong>Visual Studio Code</strong> y <strong>SQL</strong> para la propuesta y desarrollo de un programa que <strong>automatizo procesos</strong> y <strong>optimizo</strong> tareas repetitivas, tediosas y complejas. Tareas como la verificación de servicios activos en <strong>servidores Linux / Windows</strong>, <strong>reportería</strong> de status de cajas, búsqueda y corrección de archivos relacionados con artículos inexistentes, captura de series que permitió acelerar el <strong>inventariado</strong>, etc. De esta forma aporté un <strong>valor tangible</strong> al flujo de trabajo dentro de la empresa.
+                            <p class="card-text">
+                                Conocimientos avanzados en <strong>Excel</strong>, <strong>Power BI</strong>, manejo de <strong>tablas dinámicas</strong> y creación de <strong>dashboards interactivos</strong>.
                             </p>
+                            <button type="button" class="btn btn-outline-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#visualizacionModal" style="width:40px; height:40px; font-size:1.5rem; line-height:1;">
+                                +
+                            </button>
                         </div>
                     </div>
                 </div>
+                <!-- Programación -->
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+                            <h3 class="card-title">Programación</h3>
+                            <p class="card-text">
+                                Experiencia en <strong>Python</strong>, <strong>Visual Studio Code</strong> y <strong>SQL</strong> para automatizar procesos, optimizar tareas y crear soluciones eficientes.
+                            </p>
+                            <button type="button" class="btn btn-outline-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#programacionModal" style="width:40px; height:40px; font-size:1.5rem; line-height:1;">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Análisis de Datos -->
+                <div class="col-md-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
                             <i class="fas fa-brain fa-3x mb-3 text-primary"></i>
-                            <h3 class="card-title">Analisis de Datos</h3>
-                            <p class="card-text">He complementado mi formación con un Diplomado en <strong>Inteligencia y Análisis de Datos</strong> otorgado por WE Educación Ejecutiva, institución avalada por la Florida Global University. Esta formación refuerza mis conocimientos en <strong>Python</strong> avanzado, uso de notebooks - <strong>Jupyter</strong> o <strong>Colab</strong>, manejo de grandes volúmenes de datos (<strong>Big Data</strong>), <strong>procesamiento</strong> y <strong>limpieza</strong> de datos, hasta el <strong>análisis exploratorio</strong> y la construcción del <strong>modelo predictivo</strong>, lo que refuerza mi enfoque práctico y estratégico para <strong>generar soluciones</strong> basadas en datos.</p>
+                            <h3 class="card-title">Análisis de Datos</h3>
+                            <p class="card-text">
+                                Diplomado en <strong>Inteligencia y Análisis de Datos</strong>, manejo de <strong>Python</strong> avanzado, <strong>Big Data</strong> y modelado predictivo.
+                            </p>
+                            <button type="button" class="btn btn-outline-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#analisisDatosModal" style="width:40px; height:40px; font-size:1.5rem; line-height:1;">
+                                +
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -86,6 +102,104 @@
 
 
 
+
+    <!-- Modal Visualización -->
+    <div class="modal fade" id="visualizacionModal" tabindex="-1" aria-labelledby="visualizacionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+            <div class="w-100 text-center">
+                <i class="fas fa-chart-bar fa-3x mb-2 text-primary"></i>
+                <h4 class="modal-title w-100" id="visualizacionModalLabel">Visualización</h4>
+            </div>
+            <button type="button" class="btn-close position-absolute end-0 me-3 mt-3" data-bs-dismiss="modal" aria-label="Close" style="font-size:2rem;"></button>
+            </div>
+            <div class="modal-body pt-0">
+            <p>
+                Tengo pasión por la visualización de datos. Si buscas dashboards claros y visuales, te puedo ayudar a transformar datos complejos en información comprensible y útil.
+            </p>
+            <hr>
+            <strong>Puedo ayudarte si:</strong>
+            <ul>
+                <li>Necesitas un dashboard interactivo en Excel o Power BI para tu empresa.</li>
+                <li>Requieres reportes visuales claros para la toma de decisiones.</li>
+            </ul>
+            <strong>Ejemplos:</strong>
+            <ul>
+                <li><em>Dashboard de activos (cajas - POS):</em> Consolidación y visualización de variables como leasing, fecha de devolución, ubicación actual, tienda asignada y modelo, facilitando planes de acción y ahorros tangibles.</li>
+                <li><em>Tablas dinámicas personalizadas:</em> Automatización de reportes para diferentes áreas del negocio.</li>
+            </ul>
+            <a href="projects.html" class="btn btn-outline-primary my-2">Ver Ejemplos</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Programación -->
+    <div class="modal fade" id="programacionModal" tabindex="-1" aria-labelledby="programacionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+            <div class="w-100 text-center">
+                <i class="fas fa-code fa-3x mb-2 text-primary"></i>
+                <h4 class="modal-title w-100" id="programacionModalLabel">Programación</h4>
+            </div>
+            <button type="button" class="btn-close position-absolute end-0 me-3 mt-3" data-bs-dismiss="modal" aria-label="Close" style="font-size:2rem;"></button>
+            </div>
+            <div class="modal-body pt-0">
+            <p>
+                Me apasiona el desarrollo de soluciones que automatizan tareas y mejoran procesos. Utilizo herramientas modernas como Python, SQL y Visual Studio Code para ofrecer resultados tangibles.
+            </p>
+            <hr>
+            <strong>Puedo ayudarte si:</strong>
+            <ul>
+                <li>Quieres automatizar tareas repetitivas o tediosas en tu empresa.</li>
+                <li>Necesitas scripts personalizados para procesamiento de datos o reportes.</li>
+            </ul>
+            <strong>Ejemplos:</strong>
+            <ul>
+                <li><em>Automatización de reportes:</em> Scripts en Python que reducen tiempos operativos.</li>
+                <li><em>Inventariado acelerado:</em> Captura y procesamiento de información de equipos y activos.</li>
+            </ul>
+            <a href="projects.html" class="btn btn-outline-primary my-2">Ver Ejemplos</a>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+
+        <!-- Modal Análisis de Datos -->
+    <div class="modal fade" id="analisisDatosModal" tabindex="-1" aria-labelledby="analisisDatosModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+            <div class="w-100 text-center">
+                <i class="fas fa-brain fa-3x mb-2 text-primary"></i>
+                <h4 class="modal-title w-100" id="analisisDatosModalLabel">Análisis de Datos</h4>
+            </div>
+            <button type="button" class="btn-close position-absolute end-0 me-3 mt-3" data-bs-dismiss="modal" aria-label="Close" style="font-size:2rem;"></button>
+            </div>
+            <div class="modal-body pt-0">
+            <p>
+                Especialista en procesamiento, limpieza y análisis exploratorio de grandes volúmenes de datos. Formación en inteligencia y análisis de datos, enfoque en soluciones prácticas y predictivas.
+            </p>
+            <hr>
+            <strong>Puedo ayudarte si:</strong>
+            <ul>
+                <li>Necesitas analizar grandes cantidades de datos para obtener insights clave.</li>
+                <li>Buscas aplicar técnicas de <strong>Machine Learning</strong> o modelos predictivos.</li>
+            </ul>
+            <strong>Ejemplos:</strong>
+            <ul>
+                <li><em>Modelo predictivo:</em> Desarrollo y aplicación en la optimización de inventarios y procesos.</li>
+                <li><em>Análisis exploratorio:</em> Identificación de patrones y tendencias para la toma de decisiones estratégicas.</li>
+            </ul>
+            <a href="projects.html" class="btn btn-outline-primary my-2">Ver Ejemplos</a>
+            </div>
+        </div>
+        </div>
+    </div>
 
 
     <!-- Sección Hero -->
