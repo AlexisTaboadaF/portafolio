@@ -5,7 +5,7 @@ body {
     padding-top: 56px; /* Para compensar la navbar fija */
 }
 
-/* Sección Hero */
+/* SECCION HERO -------------------------------------------------------------------------- */
 .hero-section {
     
     background: linear-gradient(135deg, #4e73df 0%, #f8fafc 100%);
@@ -21,8 +21,24 @@ body {
     padding-bottom: 50px;
 }
 
+.hero-image img {
+    max-width: 95%;
+    height: auto;
+}
 
-/* Fondo de partículas SOLO en el container-fluid */
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* FONDO DE PARTICULAS  SOLO en el container-fluid ----------------------------------------*/
 .container-fluid > #particles-js {
     position: absolute;
     width: 100%;
@@ -44,30 +60,7 @@ body {
 
 
 
-
-
-
-
-.hero-image img {
-    max-width: 95%;
-    height: auto;
-}
-
-.hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.hero-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-
-
-
-
-/* Estilo para cabecera tipo "hero-text" en la sección habilidades */
+/* SECCION HABILIDADES ---------------------------------------------------- */
 .skills-header {
     margin-bottom: 2rem;
 }
@@ -112,7 +105,7 @@ body {
     text-align: justify;
 }
 
-
+/* SECCION MODAL DE HABILIDADES ---------------------------------------------------- */
 
 .btn.rounded-circle {
     border-radius: 50% !important;
@@ -131,12 +124,14 @@ body {
 
 .modal-content {
     border-radius: 20px;
+    padding: 2rem !important;
+
 }
 
 
 
 
-
+/* SECCION PORTAFOLIO ---------------------------------------------------- */
 
 /* PORTAFOLIO custom styles */
 #portfolio {
@@ -163,7 +158,7 @@ body {
   .portfolio-overlay {
     position: absolute;
     left: 0; top: 0; right: 0; bottom: 0;
-    background: rgba(30, 144, 255, 0.7); /* azul claro translúcido */
+    background: rgba(4, 80, 156, 0.7); /* azul claro translúcido */
     opacity: 0;
     transition: opacity .2s;
     z-index: 2;
@@ -186,14 +181,17 @@ body {
   }
   
   .portfolio-overlay h5 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: .5rem;
     color: #fff;
   }
   
   .portfolio-overlay span {
-    color: #f1f6ff;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    
   }
   
   @media (max-width: 767px) {
@@ -211,7 +209,7 @@ body {
 
 
 
-/* Tarjetas */
+/* TARJETAS DE HABILIDADES */
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
@@ -224,6 +222,8 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+
 
 /* Secciones */
 section {
@@ -255,6 +255,9 @@ section {
     background-color: #343a40;
     color: white;
 }
+
+
+
 
 /* Barra de navegación */
 .navbar {
