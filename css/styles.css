@@ -130,6 +130,26 @@ body {
 
 
 
+/* Limita y centra la imagen de los modales del portafolio en todas las pantallas */
+.portfolio-modal-img,
+.modal-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  width: 80%;
+  height: auto;
+}
+
+@media (max-width: 575.98px) {
+  .portfolio-modal-img,
+  .modal-content img {
+    max-width: 250px;
+    width: 70%;
+  }
+}
+
+
 
 /* SECCION PORTAFOLIO ---------------------------------------------------- */
 
