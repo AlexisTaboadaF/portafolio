@@ -1,39 +1,38 @@
 /* Estilos generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    padding-top: 56px; /* Para compensar la navbar fija */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define la familia de fuentes principal para toda la página */
+    color: #333;                          /* Color de texto predeterminado (gris oscuro) */
+    padding-top: 56px;                    /* Espacio arriba para que el contenido no quede oculto detrás de la navbar fija */
 }
 
 /* SECCION HERO -------------------------------------------------------------------------- */
 .hero-section {
-    
-    background: linear-gradient(135deg, #4e73df 0%, #f8fafc 100%);
-    color: #333;
+    background: linear-gradient(135deg, #4e73df 0%, #f8fafc 100%); /* Fondo degradado de azul a blanco */
+    color: #333;                          /* Color de texto para la sección hero */
 }
 
 .wide-container {
-    max-width: 2000px;
-    width: 100%;
-    margin: 0 auto;
-    height: 600px; /* Altura fija */
-    padding-top: 50px;   /* Puedes ajustar estos valores */
-    padding-bottom: 50px;
+    max-width: 2000px;                    /* Ancho máximo del contenedor */
+    width: 100%;                          /* Ocupa el 100% del ancho disponible */
+    margin: 0 auto;                       /* Centra el contenedor horizontalmente */
+    height: 600px;                        /* Altura fija de la sección hero */
+    padding-top: 50px;                    /* Espacio arriba dentro del contenedor */
+    padding-bottom: 50px;                 /* Espacio abajo dentro del contenedor */
 }
 
 .hero-image img {
-    max-width: 95%;
-    height: auto;
+    max-width: 95%;                       /* La imagen ocupa como máximo el 95% del ancho del contenedor */
+    height: auto;                         /* Mantiene la proporción original de la imagen */
 }
 
 .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 3rem;                      /* Tamaño grande para el título principal */
+    margin-bottom: 0.5rem;                /* Espacio inferior después del título */
 }
 
 .hero-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;                      /* Tamaño para el subtítulo */
+    margin-bottom: 1rem;                  /* Espacio inferior después del subtítulo */
 }
 
 
@@ -59,73 +58,71 @@ body {
 }
 
 
-
 /* SECCION HABILIDADES ---------------------------------------------------- */
 .skills-header {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;                  /* Espacio inferior para separar el encabezado del contenido */
 }
 
 .skills-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #4e73df;
-    line-height: 1.1;
-    letter-spacing: 0.01em;
+    font-size: 3rem;                      /* Tamaño de fuente grande para el título principal */
+    font-weight: bold;                    /* Texto en negrita */
+    color: #4e73df;                       /* Color azul para el título */
+    line-height: 1.1;                     /* Altura de línea ajustada */
+    letter-spacing: 0.01em;               /* Espaciado entre letras ligeramente mayor */
 }
 
 .skills-subtitle {
-    font-size: 1.7rem;
-    color: #203060;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+    font-size: 1.7rem;                    /* Tamaño para el subtítulo */
+    color: #203060;                       /* Color azul oscuro para el subtítulo */
+    font-weight: 500;                     /* Peso de fuente seminegrita */
+    margin-bottom: 0.5rem;                /* Espacio inferior después del subtítulo */
 }
 
 .skills-desc {
-    font-size: 1.15rem;
-    color: #1a2340;
-    font-weight: 400;
-    max-width: 700px;
-    margin: 0 auto;
+    font-size: 1.15rem;                   /* Tamaño de fuente para la descripción */
+    color: #1a2340;                       /* Color de texto para la descripción */
+    font-weight: 400;                     /* Peso de fuente regular */
+    max-width: 700px;                     /* Ancho máximo de la descripción */
+    margin: 0 auto;                       /* Centra la descripción horizontalmente */
 }
 
+/* Ajustes responsivos para la sección de habilidades en pantallas medianas y pequeñas */
 @media (max-width: 768px) {
     .skills-title {
-        font-size: 2.2rem;
+        font-size: 2.2rem;                /* Reduce el tamaño del título en pantallas pequeñas */
     }
     .skills-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.1rem;                /* Reduce el tamaño del subtítulo en pantallas pequeñas */
     }
     .skills-desc {
-        font-size: 1rem;
+        font-size: 1rem;                  /* Reduce el tamaño de la descripción en pantallas pequeñas */
     }
 }
 
-
 .card-text {
-    text-align: justify;
+    text-align: justify;                  /* Justifica el texto de las tarjetas */
 }
 
 /* SECCION MODAL DE HABILIDADES ---------------------------------------------------- */
 
 .btn.rounded-circle {
-    border-radius: 50% !important;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    font-size: 1.6rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 50% !important;        /* Hace el botón completamente circular */
+    width: 40px;                          /* Ancho fijo del botón */
+    height: 40px;                         /* Alto fijo del botón */
+    padding: 0;                           /* Elimina el padding interno */
+    font-size: 1.6rem;                    /* Tamaño de fuente grande para el ícono del botón */
+    display: inline-flex;                 /* Usa flexbox para centrar el contenido */
+    align-items: center;                  /* Centra verticalmente el contenido */
+    justify-content: center;              /* Centra horizontalmente el contenido */
 }
 
 .modal-header {
-    border-bottom: none;
+    border-bottom: none;                  /* Elimina la línea inferior del encabezado del modal */
 }
 
 .modal-content {
-    border-radius: 20px;
-    padding: 1.8rem !important;
-
+    border-radius: 20px;                  /* Bordes redondeados para el modal */
+    padding: 1.8rem !important;           /* Padding interno para el contenido del modal (sobrescribe otros estilos) */
 }
 
 
@@ -133,198 +130,190 @@ body {
 /* Limita y centra la imagen de los modales del portafolio en todas las pantallas */
 .portfolio-modal-img,
 .modal-content img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 400px;
-  width: 80%;
-  height: auto;
+  display: block;               /* Hace que la imagen sea un bloque para poder centrarla */
+  margin-left: auto;            /* Centra la imagen horizontalmente */
+  margin-right: auto;           /* Centra la imagen horizontalmente */
+  max-width: 400px;             /* Limita el ancho máximo de la imagen a 400px */
+  width: 80%;                   /* La imagen ocupa el 80% del ancho del contenedor */
+  height: auto;                 /* Mantiene la proporción original de la imagen */
 }
 
+/* Ajustes para pantallas pequeñas (móviles) */
 @media (max-width: 575.98px) {
   .portfolio-modal-img,
   .modal-content img {
-    max-width: 250px;
-    width: 70%;
+    max-width: 250px;           /* En móviles, limita el ancho máximo a 250px */
+    width: 70%;                 /* En móviles, la imagen ocupa el 70% del ancho del contenedor */
   }
 }
-
 
 
 /* SECCION PORTAFOLIO ---------------------------------------------------- */
 
 /* PORTAFOLIO custom styles */
 #portfolio {
-    background: #f6f7fa;
-  }
+    background: #f6f7fa;                        /* Color de fondo claro para la sección de portafolio */
+}
   
-  .portfolio-item {
-    transition: box-shadow .2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    min-height: 270px;
-  }
+.portfolio-item {
+    transition: box-shadow .2s;                 /* Transición suave para la sombra al hacer hover */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);     /* Sombra ligera alrededor del item */
+    border-radius: 15px;                        /* Bordes redondeados para las tarjetas */
+    overflow: hidden;                           /* Oculta el contenido que se sale del borde redondeado */
+    position: relative;                         /* Posición relativa para usar overlay absoluto */
+    min-height: 270px;                          /* Altura mínima de la tarjeta en escritorio */
+}
   
-  .portfolio-item img {
-    transition: transform .2s;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.portfolio-item img {
+    transition: transform .2s;                  /* Transición suave para zoom al hacer hover */
+    display: block;                             /* Elimina espacio extra debajo de la imagen */
+    width: 100%;                                /* Imagen ocupa todo el ancho del contenedor */
+    height: 100%;                               /* Imagen ocupa todo el alto del contenedor */
+    object-fit: cover;                          /* La imagen cubre todo el contenedor sin deformarse */
+}
   
-  .portfolio-overlay {
-    position: absolute;
-    left: 0; top: 0; right: 0; bottom: 0;
-    background: rgba(4, 80, 156, 0.7); /* azul claro translúcido */
-    opacity: 0;
-    transition: opacity .2s;
-    z-index: 2;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; /* El overlay no bloquea el click para el modal */
-  }
+.portfolio-overlay {
+    position: absolute;                         /* Posiciona el overlay encima de la imagen */
+    left: 0; top: 0; right: 0; bottom: 0;       /* El overlay ocupa todo el item */
+    background: rgba(4, 80, 156, 0.7);          /* Fondo azul claro translúcido */
+    opacity: 0;                                 /* Inicialmente el overlay es invisible */
+    transition: opacity .2s;                    /* Transición suave para mostrar/ocultar */
+    z-index: 2;                                 /* El overlay se coloca sobre la imagen */
+    padding: 1.5rem;                            /* Espaciado interno */
+    display: flex;                              /* Usa flexbox para centrar el contenido */
+    flex-direction: column;                     /* Apila los elementos verticalmente */
+    justify-content: center;                    /* Centra verticalmente el contenido */
+    align-items: center;                        /* Centra horizontalmente el contenido */
+    pointer-events: none;                       /* El overlay no bloquea el click para el modal */
+}
   
-  .portfolio-item:hover img {
-    transform: scale(1.06);
-    filter: blur(1px);
-  }
+.portfolio-item:hover img {
+    transform: scale(1.06);                     /* Hace zoom sobre la imagen al hacer hover */
+    filter: blur(1px);                          /* Aplica un ligero desenfoque */
+}
   
-  .portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
-    pointer-events: auto;
-  }
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;                                /* Muestra el overlay al hacer hover */
+    pointer-events: auto;                      /* Permite interacción con el overlay cuando está visible */
+}
   
-  .portfolio-overlay h5 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: .5rem;
-    color: #fff;
-  }
+.portfolio-overlay h5 {
+    font-size: 1.5rem;                         /* Tamaño de fuente para el título en el overlay */
+    font-weight: bold;                         /* Título en negrita */
+    margin-bottom: .5rem;                      /* Espacio debajo del título */
+    color: #fff;                               /* Color de texto blanco */
+}
   
-  .portfolio-overlay span {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #ffffff;
-    
-  }
+.portfolio-overlay span {
+    font-size: 1rem;                           /* Tamaño de fuente para el subtítulo en el overlay */
+    font-weight: bold;                         /* Subtítulo en negrita */
+    color: #ffffff;                            /* Color de texto blanco */
+}
   
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .portfolio-item {
-      min-height: 180px;
+      min-height: 180px;                       /* Reduce la altura mínima de la tarjeta en móviles */
     }
     .portfolio-overlay {
-      font-size: 0.95rem;
-      padding: .75rem;
+      font-size: 0.95rem;                      /* Reduce el tamaño de fuente del overlay en móviles */
+      padding: .75rem;                         /* Disminuye el padding interno en móviles */
     }
-  }
-
-
-
+}
 
 
 
 /* TARJETAS DE HABILIDADES */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave para movimiento y sombra */
+    border: none;                                  /* Elimina el borde predeterminado */
+    border-radius: 10px;                           /* Bordes redondeados para la tarjeta */
+    overflow: hidden;                              /* Oculta contenido que se salga de los bordes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);      /* Sombra inicial suave */
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);                   /* Eleva la tarjeta al hacer hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);    /* Sombra más intensa al hacer hover */
 }
-
-
 
 /* Secciones */
 section {
-    padding: 80px 0;
+    padding: 80px 0;                              /* Espaciado vertical grande para separar secciones */
 }
 
 /* Animaciones para elementos al hacer scroll */
 .fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    opacity: 0;                                   /* Elemento invisible al inicio */
+    transition: opacity 1s ease-in-out;           /* Transición suave de opacidad */
 }
 
 .fade-in.visible {
-    opacity: 1;
+    opacity: 1;                                   /* Elemento visible cuando se le agrega 'visible' */
 }
 
 /* Botones personalizados */
 .btn-primary {
-    background-color: #4e73df;
-    border-color: #4e73df;
+    background-color: #4e73df;                    /* Color de fondo azul personalizado */
+    border-color: #4e73df;                        /* Borde del mismo color azul */
 }
 
 .btn-primary:hover {
-    background-color: #2e59d9;
-    border-color: #2e59d9;
+    background-color: #2e59d9;                    /* Azul más oscuro al hacer hover */
+    border-color: #2e59d9;                        /* Borde azul más oscuro al hacer hover */
 }
 
 .btn-outline-dark:hover {
-    background-color: #343a40;
-    color: white;
+    background-color: #343a40;                    /* Fondo negro al hacer hover */
+    color: white;                                 /* Texto blanco al hacer hover */
 }
-
-
-
 
 /* Barra de navegación */
 .navbar {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);    /* Sombra sutil para la barra de navegación */
 }
 
 /* Footer */
 footer a {
-    text-decoration: none;
+    text-decoration: none;                        /* Quita el subrayado de los links en el footer */
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline;                   /* Subraya los links al pasar el mouse */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .hero-section h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem;                        /* Reduce tamaño del h1 en pantallas pequeñas */
     }
     
     .hero-section h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem;                        /* Reduce tamaño del h2 en pantallas pequeñas */
     }
     
     section {
-        padding: 60px 0;
+        padding: 60px 0;                          /* Reduce el espacio vertical en sección para móvil */
     }
 }
-
 
 /* Animaciones mejoradas */
 @keyframes fadeInUp {
     from {
-        opacity: 0;
-        transform: translate3d(0, 40px, 0);
+        opacity: 0;                               /* Empieza invisible */
+        transform: translate3d(0, 40px, 0);       /* Empieza desplazado hacia abajo */
     }
     to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
+        opacity: 1;                               /* Termina visible */
+        transform: translate3d(0, 0, 0);          /* Termina en su posición original */
     }
 }
 
 .hero-content {
-    animation-duration: 1s;
-    animation-fill-mode: both;
+    animation-duration: 1s;                       /* Duración de la animación */
+    animation-fill-mode: both;                    /* Mantiene el estado final de la animación */
 }
+
+
 
 /* Estilos para la sección de estadísticas */
 .stat-item {
@@ -374,6 +363,8 @@ footer a:hover {
 .project-item:hover .project-info {
     transform: translateY(0);
 }
+
+
 
 /* Estilos para la sección de contacto */
 .contact-info-item {
