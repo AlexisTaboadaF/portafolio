@@ -5,6 +5,11 @@ body {
     padding-top: 56px;                    /* Espacio arriba para que el contenido no quede oculto detrás de la navbar fija */
 }
 
+
+html {
+  scroll-behavior: smooth; /* Hace que todos los desplazamientos sean suaves */
+}
+
 /* SECCION HERO -------------------------------------------------------------------------- */
 .hero-section {
     background: linear-gradient(135deg, #4e73df 0%, #f8fafc 100%); /* Fondo degradado de azul a blanco */
@@ -384,3 +389,6 @@ footer a:hover {
     border-radius: 50%;
     background-color: rgba(78, 115, 223, 0.1);
 }
+
+
+
