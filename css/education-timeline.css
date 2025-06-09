@@ -1,0 +1,237 @@
+/* Estilos para la sección de educación */
+
+/* Contenedor principal de la sección Education */
+#education {
+    background: #d3dfe0;       /* Color de fondo suave */
+    min-height: 460px;         /* Altura mínima de la sección */
+}
+
+/* Contenedor general del timeline horizontal */
+.timeline {
+    display: flex;             /* Distribuye los hijos en una fila */
+    justify-content: space-between; /* Espacio equitativo entre los ítems */
+    align-items: flex-end;     /* Los ítems se alinean abajo (puntos y línea) */
+    list-style: none;          /* Elimina viñetas de la lista */
+    padding: 0 0 40px 0;       /* Padding inferior para despejar el contenido siguiente */
+    margin: 0 auto 0 auto;     /* Centra el timeline horizontalmente */
+    max-width: 1200px;         /* Ancho máximo del timeline */
+    position: relative;        /* Permite posicionar la línea ::before en absoluto */
+    height: 110px;             /* Altura del timeline (ajustar según diseño) */
+}
+
+/* Línea horizontal del timeline */
+.timeline::before {
+    content: "";               /* Pseudo-elemento vacío para la línea */
+    position: absolute;        /* Posicionada respecto a .timeline */
+    left: 10%;                 /* Margen izquierdo para acortar la línea */
+    right: 10%;                /* Margen derecho para acortar la línea */
+    height: 3px;               /* Grosor de la línea */
+    background: #055349;       /* Color de la línea */
+    top: 57px;                 /* Posición vertical para centrar con los puntos */
+    z-index: 0;                /* Detrás de los puntos */
+    border-radius: 2px;        /* Bordes redondeados para suavizar la línea */
+}
+
+/* Elemento individual del timeline (certificado) */
+.timeline-item {
+    position: relative;        /* Necesario para overlays o efectos */
+    flex: 1;                   /* Ocupa espacio equitativo */
+    min-width: 100px;          /* Ancho mínimo para que no se solapen */
+    display: flex;             /* Estructura en columna */
+    flex-direction: column;    /* Título arriba, punto abajo */
+    align-items: center;       /* Centra el contenido horizontalmente */
+    z-index: 1;                /* Sobre la línea pero debajo del modal */
+    cursor: pointer;           /* Cursor de mano para indicar interactividad */
+    background: transparent;   /* Fondo transparente */
+}
+
+/* Título del certificado */
+.timeline-title {
+    font-size: 1.08rem;        /* Tamaño de fuente */
+    font-weight: 500;          /* Peso (negrita media) */
+    color: #222;               /* Color del texto */
+    transition: color 0.2s;    /* Transición suave al pasar el mouse */
+    cursor: pointer;           /* Cursor de mano */
+    margin-bottom: 18px;       /* Espacio entre el título y el punto */
+    background: transparent;   /* Fondo transparente */
+    text-align: center;        /* Centra el texto */
+    line-height: 1.2;          /* Altura de línea cómoda */
+}
+
+/* Punto del timeline */
+.timeline-dot {
+    width: 24px;               /* Diámetro del círculo */
+    height: 24px;              /* Diámetro del círculo */
+    background: #6bbcb1;       /* Color de fondo del punto */
+    border-radius: 50%;        /* Lo hace perfectamente redondo */
+    border: 4px solid #fff;    /* Borde blanco alrededor del círculo */
+    box-shadow: 0 2px 8px #0001; /* Sombra suave */
+    position: relative;        /* Para overlays si es necesario */
+    z-index: 2;                /* Sobre la línea */
+    transition: background 0.2s, box-shadow 0.2s; /* Transiciones suaves */
+}
+
+/* Punto y título resaltados cuando están activos o en hover */
+.timeline-item.active .timeline-dot,
+.timeline-item:hover .timeline-dot {
+    background: #1c7f9d;            /* Cambia el color del punto */
+    box-shadow: 0 0 0 7px #6bbcb140;/* Añade halo de color */
+}
+.timeline-item.active .timeline-title,
+.timeline-item:hover .timeline-title {
+    color: #1c7f9d;                 /* Cambia el color del título */
+}
+
+/* Contenedor para la miniatura y el nombre del certificado mostrado */
+.certificate-preview {
+    min-height: 220px;              /* Altura mínima para el área */
+    margin: 0 auto;                 /* Centrado horizontal */
+    margin-top: 30px;               /* Espacio arriba respecto al timeline */
+    max-width: 100%;                /* No excede el ancho del contenedor */
+    transition: all 0.25s;          /* Transición suave cuando cambia el contenido */
+    display: flex;                  /* Flex para centrar el contenido */
+    flex-direction: column;         /* Miniatura arriba, nombre abajo */
+    align-items: center;            /* Centra horizontalmente la miniatura */
+    justify-content: flex-start;    /* Comienza desde arriba */
+}
+
+/* Imagen miniatura del certificado */
+.certificate-mini {
+    max-width: 220px;               /* Ancho máximo de la miniatura (ajustable) */
+    width: 100%;                    /* Ocupará todo el ancho disponible hasta el máximo */
+    border-radius: 12px;            /* Bordes redondeados */
+    box-shadow: 0 4px 24px #0003;   /* Sombra para resaltar */
+    background: #fff;               /* Fondo blanco */
+    margin-bottom: 10px;            /* Espacio debajo de la miniatura */
+    animation: fadeInScale 0.2s;    /* Animación al aparecer */
+    display: block;                 /* Se comporta como bloque */
+    margin-left: auto;              /* Centrado horizontal */
+    margin-right: auto;             /* Centrado horizontal */
+}
+
+/* Nombre del certificado debajo de la miniatura */
+.certificate-label {
+    font-weight: 500;               /* Negrita media */
+    color: #1c9d8f;                 /* Color destacado */
+    font-size: 1.06rem;             /* Tamaño de fuente */
+    margin-left: 0.5rem;            /* Espacio a la izquierda (opcional) */
+    margin-top: 0.4rem;             /* Espacio arriba */
+}
+
+/* Animación de entrada suave y escalada para la miniatura */
+@keyframes fadeInScale { 
+    from { 
+        opacity: 0;                  /* Comienza invisible */
+        transform: scale(0.92);      /* Empieza un poco más pequeño */
+    } 
+    to { 
+        opacity: 1;                  /* Termina completamente visible */
+        transform: scale(1);         /* Termina en tamaño normal */
+    } 
+}
+  
+/* Modal grande para ver el certificado ampliado */
+.certificate-modal {
+    display: none;                       /* Oculto por defecto (se muestra con JS) */
+    position: fixed;                     /* Se posiciona fijo respecto a la ventana */
+    z-index: 15000;                      /* Muy por encima del resto del contenido */
+    left: 0; top: 0;                     /* Cubre toda la pantalla desde la esquina superior izquierda */
+    width: 100vw; height: 100vh;         /* Ocupa todo el ancho y alto de la ventana */
+    background: rgba(90, 95, 100, 0.27); /* Fondo oscuro y semitransparente */
+    backdrop-filter: blur(4px);          /* Difumina el fondo detrás del modal */
+    justify-content: center;             /* Centra horizontalmente el contenido del modal */
+    align-items: center;                 /* Centra verticalmente el contenido del modal */
+}
+  
+/* Contenedor interno del modal (el cuadro blanco) */
+.certificate-modal-content {
+    background: #fff;                    /* Fondo blanco */
+    padding: 32px 32px 16px 32px;        /* Espaciado interno, menos abajo */
+    border-radius: 16px;                 /* Bordes redondeados */
+    max-width: 98vw;                     /* No excede casi todo el ancho de la ventana */
+    max-height: 96vh;                    /* No excede casi todo el alto de la ventana */
+    box-shadow: 0 8px 32px #000a;        /* Sombra para flotar sobre el fondo */
+    display: flex;                       /* Flex para organizar contenido */
+    flex-direction: column;              /* Distribución en columna */
+    align-items: center;                 /* Centra horizontalmente lo interno */
+    position: relative;                  /* Para posicionar el botón de cierre */
+    animation: fadeInScale 0.25s;        /* Animación de entrada */
+}
+  
+/* Imagen ampliada del certificado dentro del modal */
+.certificate-modal-content img {
+    max-width: 80vw;                     /* No excede 80% del ancho de la ventana */
+    max-height: 70vh;                    /* No excede 70% del alto de la ventana */
+    width: auto;                         /* Mantiene proporciones */
+    height: auto;                        /* Mantiene proporciones */
+    border-radius: 10px;                 /* Bordes redondeados */
+    box-shadow: 0 2px 12px #0004;        /* Sombra suave */
+    background: #fff;                    /* Fondo blanco por si la imagen es transparente */
+}
+  
+/* Botón de cierre del modal (la X) */
+.certificate-modal-close {
+    position: absolute;                  /* Posicionamiento absoluto dentro del modal */
+    top: 10px; right: 18px;              /* Ubicado en la esquina superior derecha */
+    font-size: 2.3rem;                   /* Tamaño grande para la X */
+    color: #1c9d8f;                      /* Color inicial */
+    cursor: pointer;                     /* Cursor de mano */
+    font-weight: bold;                   /* Negrita */
+    z-index: 2;                          /* Encima del contenido de la imagen */
+    background: none;                    /* Sin fondo */
+    border: none;                        /* Sin borde */
+    outline: none;                       /* Sin contorno al enfocar */
+    transition: color 0.2s;              /* Transición suave al cambiar color */
+}
+  
+.certificate-modal-close:hover {
+    color: #d62222;                      /* X roja al pasar el mouse encima */
+}
+  
+/* Responsive: Ajustes para pantallas medianas */
+@media (max-width: 950px) {
+    .timeline { 
+        flex-direction: column;          /* Timeline en columna */
+        align-items: center;             /* Centrado horizontal */
+        padding-bottom: 0; 
+        height: auto;                    /* Altura automática */
+    }
+    .timeline::before {
+        left: 50%;                       /* Línea vertical centrada */
+        width: 3px;                      /* Ancho de la línea vertical */
+        height: 100%;                    /* Ocupa todo el alto */
+        top: 0;
+        bottom: 0;
+        right: auto;
+    }
+    .timeline-item { 
+        flex: none;                      /* No crece, tamaño fijo */
+        margin: 28px 0;                  /* Separación vertical */
+        min-width: 140px;                /* Más ancho para el texto */
+        text-align: left;                /* Alineación de texto a la izquierda */
+    }
+    .timeline-title {
+        margin-bottom: 14px;             /* Menos espacio debajo del título */
+    }
+    .certificate-preview { 
+        align-items: center;             /* Centrado horizontal de la miniatura */
+        margin-left: 0;                  /* Quita posibles márgenes izquierdos */
+    }
+}
+
+/* Responsive: Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .timeline-title { 
+        font-size: 0.93rem;              /* Texto más pequeño */
+        max-width: 120px;                /* Limita el ancho de los títulos */
+        margin: 0 auto 14px auto;        /* Centrado con espacio inferior */
+        white-space: normal;             /* Permite saltos de línea en títulos */
+    }
+    .certificate-mini { 
+        max-width: 92vw;                 /* Miniatura no excede 92% del viewport */
+    }
+    .certificate-modal-content img { 
+        max-width: 96vw;                 /* Imagen grande no excede 96% del viewport */
+        max-height: 60vh;                /* Imagen grande no excede 60% de la altura de la ventana */
+    }
+}
