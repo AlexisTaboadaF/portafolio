@@ -11,6 +11,7 @@
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/psac-gallery.css">
+    <link rel="stylesheet" href="css/education-timeline.css">
 
 </head>
 
@@ -240,6 +241,34 @@
             </div>
         </div>
     </header>
+
+
+
+    <section id="education" style="background: #eff2f3; padding: 60px 0;">
+        <div class="container">
+          <div class="col-lg-12 text-center" style="padding-bottom: 3%">
+            <p style="font-size: 35px; line-height: 1;">Educacion Timeline</p>
+            <hr style="display: inline-flex; width: 100px; height: 2px; border: none; color: #000; background-color: #000;">
+          </div>
+          <ul class="timeline" id="education-timeline">
+            <!-- Estructura generada dinámicamente por JS -->
+            <!-- Ejemplo de estructura:
+            <li class="timeline-item">
+              <span class="timeline-title">Scrum Foundation Professional Certificate</span>
+              <span class="timeline-dot"></span>
+            </li>
+            -->
+          </ul>
+          <div id="certificate-preview" class="certificate-preview"></div>
+        </div>
+        <!-- Modal para mostrar certificado grande -->
+        <div id="certificate-modal" class="certificate-modal">
+          <div class="certificate-modal-content">
+            <span class="certificate-modal-close">&times;</span>
+            <img src="" alt="Certificado grande" id="certificate-modal-img" />
+          </div>
+        </div>
+      </section>
 
 
 
@@ -522,6 +551,8 @@
     </script>
 
 <script src="js/psac-gallery.js"></script>
+<script src="js/showCertificate.js"></script>
+<script src="js/filterPortfolio.js"></script>
 
 <!-- Lightbox de la miagen del modal de Psac -->
 <div id="psac-lightbox" class="psac-lightbox" tabindex="-1" style="display:none;">
