@@ -105,18 +105,19 @@
 
 /* Imagen expandida dentro del lightbox */
 .psac-lightbox-img {
-    position: relative;                /* Se posiciona relativamente respecto al contenedor flex */
-    max-width: 98vw;                   /* Ocupa casi todo el ancho de la pantalla sin desbordar */
-    max-height: 90vh;                  /* Ocupa casi todo el alto de la pantalla sin desbordar */
-    width: auto;                       /* Mantiene la proporción original de la imagen */
-    height: auto;                      /* Mantiene la proporción original de la imagen */
-    border-radius: 16px;               /* Bordes redondeados para mejor estética */
-    box-shadow: 0 4px 32px #000b, 0 0 0 4px #fff3; /* Sombra para profundidad y resplandor blanco */
-    z-index: 1;                        /* Se asegura de estar encima del fondo del lightbox */
-    background: #fff;                  /* Fondo blanco útil para imágenes PNG */
-    animation: psac-zoom-in 0.15s;     /* Animación suave de aparición tipo zoom */
-    display: block;                    /* Hace que la imagen sea un bloque para centrarla con margin auto */
-    margin: 0 auto;                    /* Centra horizontalmente la imagen */
+    position: relative;
+    max-width: 98vw !important;      /* Ocupa casi todo el ancho del viewport */
+    max-height: 94vh !important;     /* Ocupa casi todo el alto del viewport */
+    width: auto !important;          /* Mantén la proporción original */
+    height: auto !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px #000b, 0 0 0 4px #fff3;
+    z-index: 1;
+    background: #fff;
+    animation: psac-zoom-in 0.15s;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain !important;  /* Muy importante para que no se deforme */
 }
 
 /* Ajustes responsivos para pantallas pequeñas (menos de 700px) */
