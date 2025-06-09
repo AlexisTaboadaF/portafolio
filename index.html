@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/psac-gallery.css">
 
 </head>
 
@@ -333,7 +334,7 @@
         </div>
 
 
-        <!-- Modal Proyecto 2 - PSAC-->
+        <!-- Modal Proyecto 2 - PSAC con galería de miniaturas RESPONSIVE y sin desbordamiento -->
         <div class="modal fade" id="portfolio2Modal" tabindex="-1" aria-labelledby="portfolio2ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
@@ -358,6 +359,38 @@
                             <p class="mb-3">
                                 A través de scripts en Python y Bash (PSAC), se logró verificar automáticamente el estado de los servidores, generar reportes periódicos y realizar modificaciones masivas de archivos promocionales en diferentes entornos.
                             </p>
+                        </div>
+
+
+                        <!-- Galería de miniaturas RESPONSIVE -->
+                        <div class="psac-gallery-container my-4">
+                            <div class="text-center">
+                                <img id="mainGalleryImg" src="image/psac-articulos1.jpg" class="rounded shadow mb-2 psac-main-img" alt="Imagen grande" style="cursor:zoom-in;" onclick="expandPSACImage()" />
+                                <div id="mainGalleryDesc" class="psac-main-desc">
+                                    Pantalla principal del programa PSAC, mostrando el menú de operaciones disponibles.
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap psac-thumbs">
+                                <img src="image/psac-articulos1.jpg" width="60" onclick="galleryShow(0)" id="thumb0" class="rounded active-thumb" />
+                                <img src="image/psac-conteocajase1.jpg" width="60" onclick="galleryShow(1)" id="thumb1" class="rounded" />
+                                <img src="image/psac-dpfile1.jpg" width="60" onclick="galleryShow(2)" id="thumb2" class="rounded" />
+                                <img src="image/psac-portada1.jpg" width="60" onclick="galleryShow(3)" id="thumb3" class="rounded" />
+                                <img src="image/psac-servicios2.jpg" width="60" onclick="galleryShow(4)" id="thumb4" class="rounded" />
+                                <img src="image/psac-articulo2.jpg" width="60" onclick="galleryShow(5)" id="thumb5" class="rounded" />
+                                
+
+
+                            </div>
+                        </div>
+                        <!-- Fin galería de miniaturas -->
+                        
+                        <!-- Lightbox para imagen expandida -->
+                            <div id="psac-lightbox" class="psac-lightbox" tabindex="-1" style="display:none;">
+                                <div class="psac-lightbox-backdrop" onclick="closePSACImage()"></div>
+                                <img id="psac-lightbox-img" class="psac-lightbox-img" src="" alt="Imagen expandida" />
+                            </div>
+
+                        <div style="font-size: 0.87rem;">
                             <p class="mb-3">
                                 El sistema permitió reducir tiempos de operación, minimizar errores humanos y facilitar la entrega de información clave a las áreas responsables.
                             </p>
@@ -365,9 +398,10 @@
                                 Esta automatización impactó en la eficiencia de los procesos internos y liberó recursos para tareas de mayor valor agregado en la organización.
                             </p>
                         </div>
+
                         <div class="mt-4">
                             <video width="100%" height="auto" controls poster="image/psac1.jpg" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
-                                <source src="video/video psac.mp4" type="video/mp4">
+                                <source src="video/video dashboard.mp4" type="video/mp4">
                                 Tu navegador no soporta la reproducción de video.
                             </video>
                         </div>
@@ -375,6 +409,12 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
 
         <!-- Modal Proyecto 3 -->
         <div class="modal fade" id="portfolio3Modal" tabindex="-1" aria-labelledby="portfolio3ModalLabel" aria-hidden="true">
@@ -481,5 +521,12 @@
       });
     </script>
 
+<script src="js/psac-gallery.js"></script>
+
+<!-- Lightbox de la miagen del modal de Psac -->
+<div id="psac-lightbox" class="psac-lightbox" tabindex="-1" style="display:none;">
+    <div class="psac-lightbox-backdrop" onclick="closePSACImage()"></div>
+    <img id="psac-lightbox-img" class="psac-lightbox-img" src="" alt="Imagen expandida" />
+</div>
 </body>
 </html>
