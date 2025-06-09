@@ -17,14 +17,15 @@
     max-width: 1200px;         /* Ancho máximo del timeline */
     position: relative;        /* Permite posicionar la línea ::before en absoluto */
     height: 110px;             /* Altura del timeline (ajustar según diseño) */
+    margin-top: 80px; /* O el valor que prefieras */
 }
 
 /* Línea horizontal del timeline */
 .timeline::before {
     content: "";               /* Pseudo-elemento vacío para la línea */
     position: absolute;        /* Posicionada respecto a .timeline */
-    left: 10%;                 /* Margen izquierdo para acortar la línea */
-    right: 10%;                /* Margen derecho para acortar la línea */
+    left: 6%;                 /* Margen izquierdo para acortar la línea */
+    right: 6%;                /* Margen derecho para acortar la línea */
     height: 3px;               /* Grosor de la línea */
     background: #055349;       /* Color de la línea */
     top: 57px;                 /* Posición vertical para centrar con los puntos */
@@ -47,7 +48,7 @@
 
 /* Título del certificado */
 .timeline-title {
-    font-size: 1.08rem;        /* Tamaño de fuente */
+    font-size: 1.03rem;        /* Tamaño de fuente */
     font-weight: 500;          /* Peso (negrita media) */
     color: #222;               /* Color del texto */
     transition: color 0.2s;    /* Transición suave al pasar el mouse */
@@ -84,29 +85,33 @@
 
 /* Contenedor para la miniatura y el nombre del certificado mostrado */
 .certificate-preview {
-    min-height: 220px;              /* Altura mínima para el área */
-    margin: 0 auto;                 /* Centrado horizontal */
-    margin-top: 30px;               /* Espacio arriba respecto al timeline */
-    max-width: 100%;                /* No excede el ancho del contenedor */
-    transition: all 0.25s;          /* Transición suave cuando cambia el contenido */
-    display: flex;                  /* Flex para centrar el contenido */
-    flex-direction: column;         /* Miniatura arriba, nombre abajo */
-    align-items: center;            /* Centra horizontalmente la miniatura */
-    justify-content: flex-start;    /* Comienza desde arriba */
+    min-height: 200px;              /* Establece una altura mínima para que el área no se colapse si no hay contenido */
+    margin: 0 auto;                 /* Centra el contenedor horizontalmente */
+    margin-top: 20px;               /* Agrega espacio en la parte superior respecto al timeline */
+    height: 200px;                  /* Fija la altura del área para que no cambie aunque la imagen previa sea más grande */
+    max-height: 270px;              /* Limita la altura máxima por si hay más contenido o imágenes grandes */
+    transition: all 0.25s;          /* Aplica una transición suave a todos los cambios de propiedad */
+    display: flex;                  /* Utiliza Flexbox para organizar el contenido interno */
+    flex-direction: column;         /* Organiza los elementos internos en columna (uno debajo del otro) */
+    align-items: center;            /* Centra los elementos internos horizontalmente */
+    justify-content: flex-start;    /* Alinea los elementos internos al inicio vertical del contenedor */
 }
 
 /* Imagen miniatura del certificado */
 .certificate-mini {
-    max-width: 220px;               /* Ancho máximo de la miniatura (ajustable) */
-    width: 100%;                    /* Ocupará todo el ancho disponible hasta el máximo */
-    border-radius: 12px;            /* Bordes redondeados */
-    box-shadow: 0 4px 24px #0003;   /* Sombra para resaltar */
-    background: #fff;               /* Fondo blanco */
-    margin-bottom: 10px;            /* Espacio debajo de la miniatura */
-    animation: fadeInScale 0.2s;    /* Animación al aparecer */
-    display: block;                 /* Se comporta como bloque */
-    margin-left: auto;              /* Centrado horizontal */
-    margin-right: auto;             /* Centrado horizontal */
+    max-width: 220px;               /* Limita el ancho máximo de la miniatura */
+    max-height: 180px;              /* Limita la altura máxima de la miniatura */
+    width: auto;                    /* El ancho se ajusta automáticamente para mantener la proporción */
+    height: auto;                   /* La altura se ajusta automáticamente para mantener la proporción */
+    object-fit: contain;            /* Escala la imagen para que quede completamente dentro del área sin recortarse */
+    border-radius: 12px;            /* Aplica bordes redondeados a la imagen */
+    box-shadow: 0 4px 24px #0003;   /* Agrega una sombra para resaltar la miniatura */
+    background: #fff;               /* Fondo blanco por si la imagen tiene transparencia */
+    margin-bottom: 10px;            /* Espacio entre la imagen y el texto/etiqueta debajo */
+    animation: fadeInScale 0.2s;    /* Aplica una animación de aparición suave y escalada */
+    display: block;                 /* Hace que la imagen se comporte como un bloque */
+    margin-left: auto;              /* Centra la imagen horizontalmente (junto con margin-right) */
+    margin-right: auto;             /* Centra la imagen horizontalmente */
 }
 
 /* Nombre del certificado debajo de la miniatura */
