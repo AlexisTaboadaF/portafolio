@@ -1,92 +1,134 @@
 /* Limita el ancho de la galería al ancho del modal y la hace responsive */
+/* Contenedor principal de la galería */
 .psac-gallery-container {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    max-width: 700px;        /* Limita el ancho máximo a 900px, para hacerlo más ancho que el valor anterior */
+    margin-left: auto;       /* Centra el contenedor horizontalmente (margen izquierdo automático) */
+    margin-right: auto;      /* Centra el contenedor horizontalmente (margen derecho automático) */
+    width: 100%;             /* Hace que el contenedor ocupe todo el ancho posible hasta el máximo permitido */
 }
+
+/* Imagen principal de la galería, ahora más grande */
 .psac-main-img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.10);
-    background: #fff;
-    border-radius: 12px;
-    /* Hacemos la imagen más grande */
-    min-height: 240px;
-    max-height: 400px;
-    cursor: zoom-in;
+    max-width: 100%;         /* La imagen no será más ancha que su contenedor */
+    width: 100%;             /* Ocupa todo el ancho del contenedor */
+    height: auto;            /* La altura se ajusta automáticamente para mantener la proporción */
+    object-fit: contain;     /* La imagen se ajusta al contenedor sin recortarse ni deformarse */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.10); /* Sombra suave debajo de la imagen */
+    background: #fff;        /* Fondo blanco debajo de la imagen (útil para imágenes con transparencia) */
+    border-radius: 12px;     /* Bordes redondeados para la imagen */
+    min-height: 340px;       /* Altura mínima más grande para que la imagen principal se vea destacada */
+    max-height: 600px;       /* Altura máxima más grande para que la imagen principal luzca mejor */
+    cursor: zoom-in;         /* Cursor de "lupa" que sugiere que se puede expandir la imagen */
+    display: block;          /* La imagen se comporta como un bloque (necesario para centrar) */
+    margin: 0 auto;          /* Centra la imagen horizontalmente dentro del contenedor */
 }
+
+/* Media query: ajustes responsivos para pantallas de hasta 900px de ancho */
+@media (max-width: 900px) {
+    .psac-gallery-container {
+        max-width: 98vw;     /* El contenedor ocupa casi todo el ancho del viewport en pantallas chicas */
+    }
+    .psac-main-img {
+        min-width: 120px;    /* La imagen nunca será más angosta que 120px */
+        max-height: 50vw;    /* La altura máxima es la mitad del ancho de la pantalla (responsive) */
+        min-height: 120px;   /* La altura mínima es 120px para que se siga viendo bien en móvil */
+    }
+}
+
+/* Descripción de la imagen principal */
 .psac-main-desc {
-    font-size: 1.01rem;
-    margin-top: 8px;
-    margin-bottom: 2px;
-    color: #222;
+    font-size: 1.01rem;           /* Tamaño de fuente apenas mayor al estándar */
+    margin-top: 8px;              /* Espacio arriba de la descripción */
+    margin-bottom: 2px;           /* Espacio debajo de la descripción */
+    color: #222;                  /* Gris oscuro para el texto */
 }
+
+/* Miniaturas (thumbnails) */
 .psac-thumbs img {
+    max-width: 60px !important;     /* Limita el ancho máximo a 60px sí o sí */
+    max-height: 60px !important;    /* Limita el alto máximo a 60px sí o sí */
+    width: auto !important;         /* El ancho real depende de la imagen, no de atributos HTML */
+    height: auto !important;
+    object-fit: cover;
     border: 2px solid transparent;
     transition: border 0.2s, box-shadow 0.2s;
-    max-width: 60px;
-    max-height: 60px;
-    object-fit: cover;
     filter: brightness(0.95);
     box-shadow: none;
 }
+
+/* Miniatura seleccionada ("activa") */
 .psac-thumbs img.active-thumb {
     border: 3px solid #2563eb !important;      /* Borde azul intenso y más grueso */
     box-shadow: 0 0 0 3px #93c5fd55;           /* Sombra azul clara visible */
-    filter: brightness(1.08);
-    z-index: 1;
+    filter: brightness(1.08);                  /* Un poco más brillante */
+    z-index: 1;                                /* Se apila encima de las demás */
 }
 
+/* Ajustes responsivos para móviles (pantallas <= 600px) */
 @media (max-width: 600px) {
     .psac-gallery-container {
-        max-width: 98vw;
+        max-width: 98vw;           /* La galería ocupa casi todo el ancho de la pantalla */
     }
     .psac-main-img {
-        max-width: 100%;
-        min-width: 120px;
-        max-height: 45vw;
-        min-height: 120px;
+        max-width: 100%;           /* La imagen sigue ocupando todo el ancho posible */
+        min-width: 120px;          /* No deja que la imagen sea demasiado pequeña */
+        max-height: 45vw;          /* Altura máxima relativa al ancho del viewport (pantalla) */
+        min-height: 120px;         /* Altura mínima para que no quede muy pequeña */
     }
     .psac-thumbs img {
-        max-width: 38px;
-        max-height: 38px;
+        max-width: 38px;           /* Miniaturas más pequeñas en móvil */
+        max-height: 38px;          /* Miniaturas más pequeñas en móvil */
     }
 }
 
 /* Estilos del lightbox */
+/* Contenedor del lightbox que cubre toda la pantalla y centra el contenido */
 .psac-lightbox {
-    position: fixed !important;
-    z-index: 12000 !important;
-    inset: 0 !important;
-    background: rgba(12,20,35,0.88) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    position: fixed;                   /* Posiciona el lightbox sobre toda la ventana, independientemente del scroll */
+    z-index: 12000;                    /* Muy por encima de otros elementos para asegurarse de que esté visible */
+    inset: 0;                          /* Ocupa todo el viewport (top:0; right:0; bottom:0; left:0) */
+    background: rgba(12,20,35,0.88);   /* Fondo oscuro semitransparente para resaltar la imagen */
+    display: flex;                     /* Usa flexbox para centrar el contenido */
+    align-items: center;               /* Centra verticalmente la imagen */
+    justify-content: center;           /* Centra horizontalmente la imagen */
+    transition: opacity 0.2s;          /* Transición suave de opacidad al mostrar/ocultar */
 }
+
+/* Fila de fondo que detecta el click para cerrar el lightbox */
+.psac-lightbox-backdrop {
+    position: absolute;                /* Se posiciona encima del lightbox para captar clics fuera de la imagen */
+    inset: 0;                          /* Ocupa todo el espacio del lightbox */
+    width: 100vw;                      /* Ancho completo de la ventana */
+    height: 100vh;                     /* Alto completo de la ventana */
+    cursor: zoom-out;                  /* Cambia el cursor a lupa con menos, indicando que se puede cerrar */
+}
+
+/* Imagen expandida dentro del lightbox */
 .psac-lightbox-img {
-    max-width: 99vw !important;
-    max-height: 97vh !important;
-    width: auto !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
-    border-radius: 16px !important;
-    box-shadow: 0 8px 48px #000b, 0 0 0 4px #fff3 !important;
-    border: 4px solid #fff !important;
-    z-index: 1 !important;
-    background: #fff !important;
-    animation: psac-zoom-in 0.15s !important;
+    position: relative;                /* Se posiciona relativamente respecto al contenedor flex */
+    max-width: 98vw;                   /* Ocupa casi todo el ancho de la pantalla sin desbordar */
+    max-height: 90vh;                  /* Ocupa casi todo el alto de la pantalla sin desbordar */
+    width: auto;                       /* Mantiene la proporción original de la imagen */
+    height: auto;                      /* Mantiene la proporción original de la imagen */
+    border-radius: 16px;               /* Bordes redondeados para mejor estética */
+    box-shadow: 0 4px 32px #000b, 0 0 0 4px #fff3; /* Sombra para profundidad y resplandor blanco */
+    z-index: 1;                        /* Se asegura de estar encima del fondo del lightbox */
+    background: #fff;                  /* Fondo blanco útil para imágenes PNG */
+    animation: psac-zoom-in 0.15s;     /* Animación suave de aparición tipo zoom */
+    display: block;                    /* Hace que la imagen sea un bloque para centrarla con margin auto */
+    margin: 0 auto;                    /* Centra horizontalmente la imagen */
 }
+
+/* Ajustes responsivos para pantallas pequeñas (menos de 700px) */
 @media (max-width: 700px) {
     .psac-lightbox-img {
-        max-width: 99vw !important;
-        max-height: 80vh !important;
+        max-width: 98vw;               /* Mantiene la imagen dentro del ancho de la pantalla */
+        max-height: 75vh;              /* Reduce la altura máxima para móviles */
     }
 }
+
+/* Animación para efecto de zoom al aparecer la imagen */
 @keyframes psac-zoom-in {
-    from { transform: scale(0.8); opacity:0.4;}
-    to   { transform: scale(1);   opacity:1;}
+    from { transform: scale(0.8); opacity:0.4;} /* Comienza más pequeña y translúcida */
+    to   { transform: scale(1);   opacity:1;}   /* Termina a tamaño normal y opaca */
 }

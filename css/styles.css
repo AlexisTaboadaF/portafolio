@@ -134,7 +134,7 @@ html {
 
 /* Limita y centra la imagen de los modales del portafolio en todas las pantallas */
 .portfolio-modal-img,
-.modal-content img {
+.modal-content img:not(.psac-main-img) {
   display: block;               /* Hace que la imagen sea un bloque para poder centrarla */
   margin-left: auto;            /* Centra la imagen horizontalmente */
   margin-right: auto;           /* Centra la imagen horizontalmente */
