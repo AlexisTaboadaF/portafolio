@@ -5,10 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
       imageUrl: "image/certificados/cert-scrum.jpg",
     },
     {
-      title: "Agente de Atencion al Cliente",
-      imageUrl: "image/certificados/cert-atencion.jpg",
-    },
-    {
       title: "Google Cloud Computing",
       imageUrl: "image/certificados/cert-googlecloud.PNG",
     },
@@ -17,7 +13,27 @@ document.addEventListener("DOMContentLoaded", function() {
       imageUrl: "image/certificados/cert-azure.jpg",
     },
     {
-      title: "Inteligencia y analisis de datos",
+      title: "Data Analytics",
+      imageUrl: "image/certificados/data analytics.jpg",
+    },
+    {
+      title: "SQL Server for Analytics",
+      imageUrl: "image/certificados/sql analytics.jpg",
+    },
+    {
+      title: "Microsoft Power BI",
+      imageUrl: "image/certificados/powerbi.jpg",
+    },
+    {
+      title: "Python: Analisis de datos",
+      imageUrl: "image/certificados/python analisis.jpg",
+    },
+    {
+      title: "Python Avanzado: Machine Learning",
+      imageUrl: "image/certificados/python avanzando.jpg",
+    },
+    {
+      title: "Diplomado en Inteligencia y analisis de datos",
       imageUrl: "image/certificados/diplomado-analisisdatos.jpg",
     },
   ];
