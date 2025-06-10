@@ -225,18 +225,51 @@
 }
 
 /* Responsive: Ajustes para pantallas pequeñas */
-@media (max-width: 600px) {
-    .timeline-title { 
-        font-size: 0.93rem;              /* Texto más pequeño */
-        max-width: 120px;                /* Limita el ancho de los títulos */
-        margin: 0 auto 14px auto;        /* Centrado con espacio inferior */
-        white-space: normal;             /* Permite saltos de línea en títulos */
+@media (max-width: 950px) {
+    .timeline {
+      flex-direction: column;          /* Coloca los elementos hijos en una columna vertical */
+      align-items: flex-end;           /* Alinea todos los items al extremo derecho */
+      position: relative;              /* Permite posicionar elementos hijos en relación a este contenedor */
+      height: auto;                    /* Altura automática según el contenido */
+      margin-left: 0;                  /* Sin margen a la izquierda */
+      margin-right: 30px;              /* Agrega espacio a la derecha para la línea vertical */
     }
-    .certificate-mini { 
-        max-width: 92vw;                 /* Miniatura no excede 92% del viewport */
+    .timeline::before {
+      left: auto;                      /* Elimina la posición fija a la izquierda */
+      right: 0;                        /* Ubica la línea vertical sobre el borde derecho */
+      width: 4px;                      /* Define el grosor de la línea vertical */
+      height: 743px;                    /* Cambia este valor: línea de 300px de alto (ajusta a tu gusto) */
+      top: 48px;                        /* Ajusta el inicio vertical de la línea (por ejemplo, alinear con el primer dot) */
+      bottom: auto;                     /* No lo ancla al fondo */                     /* Llega hasta la parte inferior */
+      margin-left: 0;                  /* Sin margen extra a la izquierda */
+      margin-right: 0;                 /* Sin margen extra a la derecha */
     }
-    .certificate-modal-content img { 
-        max-width: 96vw;                 /* Imagen grande no excede 96% del viewport */
-        max-height: 60vh;                /* Imagen grande no excede 60% de la altura de la ventana */
+    .timeline-item {
+      display: flex;                   /* Usa flexbox para alinear dot y título en fila */
+      flex-direction: row;             /* El dot aparece primero, luego el título */
+      align-items: flex-start;         /* Alinea verticalmente los hijos arriba */
+      margin: 32px 0;                  /* Espaciado vertical entre items del timeline */
+      min-width: 0;                    /* Permite que el item sea tan pequeño como su contenido */
+      width: 100%;                     /* El item ocupa todo el ancho disponible */
+      max-width: none;                 /* Sin límite de ancho máximo */
+      position: relative;              /* Permite posicionamiento relativo de hijos */
+      z-index: 1;                      /* Asegura que el item pase por encima de la línea de fondo */
+      justify-content: flex-end;       /* Alinea el contenido interno al borde derecho */
+    }
+    .timeline-dot {
+      margin-top: 0;                   /* Sin margen superior */
+      margin-left: 14px;               /* Espacio entre el título y el dot */
+      margin-right: -13px;             /* Desplaza el dot para que quede sobre la línea a la derecha */
+      z-index: 2;                      /* El dot aparece sobre la línea */
+    }
+    .timeline-title {
+      margin-bottom: 0;                /* Elimina margen inferior */
+      margin-top: 2px;                 /* Pequeño margen superior para separación visual */
+      text-align: right;               /* Alinea el texto del título a la derecha */
+      flex: 1;                         /* El título ocupa el espacio restante */
+      font-size: 1rem;                 /* Tamaño de fuente adecuado para móvil */
+      max-width: 70vw;                 /* Limita el ancho del título al 70% del viewport */
+      white-space: normal;             /* Permite saltos de línea en el texto */
+      word-break: break-word;          /* Permite cortar palabras largas para evitar desbordes */
     }
 }
