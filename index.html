@@ -65,7 +65,7 @@
                             <i class="fas fa-chart-bar fa-3x mb-3 text-primary"></i>
                             <h3 class="card-title">Visualización</h3>
                             <p class="card-text">
-                                Conocimientos avanzados en <strong>Excel</strong>, <strong>Power BI</strong>, manejo de <strong>tablas dinámicas</strong> y creación de <strong>dashboards interactivos</strong>.
+                                Conocimientos avanzados en <strong>Excel</strong>, <strong>Power BI</strong>, <strong>Tableau</strong> , manejo de <strong>tablas dinámicas</strong> y creación de <strong>dashboards interactivos</strong>.
                             </p>
                             <button type="button" class="btn btn-outline-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#visualizacionModal" style="width:40px; height:40px; font-size:1.5rem; line-height:1;">
                                 +
@@ -333,6 +333,18 @@
             <!-- Proyecto 5 -->
             <div class="col-md-4 col-sm-6">
                 <div class="portfolio-item position-relative rounded shadow-sm overflow-hidden"
+                    style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#portfolio5Modal">
+                    <img src="image/py5/Imagenportadapy5.jpg" alt="Proyecto 5 - Dashboard Tableau" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit:cover;">
+                    <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center text-center">
+                        <h5 class="text-white mb-2 fw-bold">Dashboard Tableau - Clinica RR.HH.</h5>
+                        <span class="text-white-50 small">Visualizacion de un Dashboard para RR.HH. - Rotación de personal y satisfacción laboral</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 5 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item position-relative rounded shadow-sm overflow-hidden"
                 style="cursor:pointer;" data-bs-toggle="modal" >
                     <img src="image/construccion.jpg" alt="Proyecto 3" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit:cover;">
                         <div class="portfolio-overlay d-flex flex-column justify-content-center align-items-center text-center">
@@ -572,11 +584,60 @@
         </div>
 
 
+        <!-- Modal Proyecto 5 - Dashboard Tableau - Clinica RR.HH. -->
+        <div class="modal fade" id="portfolio5Modal" tabindex="-1" aria-labelledby="portfolio5ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="w-100 text-center">
+                            <img src="image/py5/titulopy5.jpg" alt="Dashboard Tableau - Clinica RR.HH." style="max-height:120px; object-fit:contain;" class="mb-2 rounded shadow-sm">
+                            <h4 class="modal-title w-100" id="portfolio5ModalLabel">Dashboard Tableau - Clinica RR.HH.</h4>
+                            <div class="text-muted mb-2">Visualización interactiva de rotación, edad, género y satisfacción del personal</div>
+                        </div>
+                        <button type="button" class="btn-close position-absolute end-0 me-3 mt-3" data-bs-dismiss="modal" aria-label="Close" style="font-size:2rem;"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <hr>
+                        <strong>Tecnologías:</strong> Tableau, Excel
+                        <hr>
+                        <span><strong>Descripción:</strong></span>
+                        <hr>
+                        <div style="font-size: 0.87rem;">
+                            <p class="mb-3">
+                                Este proyecto consiste en la creación de un dashboard interactivo utilizando Tableau, con datos provenientes de un dataset en <strong>Excel</strong> que contiene información sobre los empleados de la clínica. Los parámetros analizados incluyen <strong>género</strong>, <strong>edad</strong>, <strong>rotación de personal</strong>, y <strong>satisfacción laboral</strong>, entre otros.
+                            </p>
+                            <p class="mb-3">
+                                El dashboard permite visualizar indicadores clave como el total de empleados, tasa de rotación, distribución de empleados por edad, y las métricas de satisfacción laboral por rol y género.
+                            </p>
+                            <p class="mb-3">
+                                Los datos están segmentados por departamentos y se presentan mediante gráficos interactivos como histogramas, pie charts, y heatmaps. Además, los usuarios pueden filtrar y analizar los datos según diferentes parámetros como el género o el rango de edad.
+                            </p>
+                        </div>
+
+                        
+                        <strong>Beneficios esperados:</strong>
+                        <hr>
+                        <ul>
+                            <li>Mejora en la toma de decisiones basada en datos concretos y análisis detallados.</li>
+                            <li>Optimización en la gestión de recursos humanos al identificar tendencias en rotación y satisfacción.</li>
+                            <li>Facilitación de la planificación estratégica para mejorar la satisfacción laboral y reducir la rotación de personal.</li>
+                        </ul>
+
+                        <div class="mt-4">
+                            <video width="100%" height="auto" controls poster="image/py5/Imagen1.jpg" style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+                                <source src="video/clinica_tableau.mp4" type="video/mp4">
+                                Tu navegador no soporta la reproducción de video.
+                            </video>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
-
-
-
-
 
 
 
@@ -647,10 +708,5 @@
 <script src="js/showCertificate.js"></script>
 <script src="js/filterPortfolio.js"></script>
 
-<!-- Lightbox de la miagen del modal de Psac -->
-<div id="psac-lightbox" class="psac-lightbox" tabindex="-1" style="display:none;">
-    <div class="psac-lightbox-backdrop" onclick="closePSACImage()"></div>
-    <img id="psac-lightbox-img" class="psac-lightbox-img" src="" alt="Imagen expandida" />
-</div>
 </body>
 </html>
